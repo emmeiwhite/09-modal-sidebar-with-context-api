@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react'
+import { createContext, useContext, useState } from 'react'
 
 export const GlobalContext = createContext()
 
@@ -24,9 +24,7 @@ function AppContext({ children }) {
 
   const contextState = {
     isModalOpen,
-    setIsModalOpen,
     isSidebarOpen,
-    setIsSidebarOpen,
     openSidebar,
     closeSidebar,
     openModal,
@@ -35,4 +33,8 @@ function AppContext({ children }) {
   return <GlobalContext.Provider value={contextState}>{children}</GlobalContext.Provider>
 }
 
+// Custom Hook
+export const useGlobalContext = () => {
+  return useContext(GlobalContext)
+}
 export default AppContext
