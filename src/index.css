@@ -300,6 +300,18 @@ main {
   background-color: rgba(0, 0, 0, 0.5);
   display: grid;
   place-content: center;
+  z-index: -1;
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* We'll toggle show-modal based on state */
+.show-modal {
+  z-index: 1;
+  visibility: visible;
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: 2s;
 }
 
 .modal-container {
