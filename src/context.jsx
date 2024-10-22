@@ -18,6 +18,6 @@ export default function AppContext({ children }) {
 }
 
 // Custom hook
-const useGlobalContext = () => {
+export const useGlobalContext = () => {
   return useContext(GlobalContext)
 }
