@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react'
+import { createContext, useContext, useState } from 'react'
 
 export const GlobalContext = createContext()
 // Now this is our context by the name GlobalContext
@@ -15,4 +15,9 @@ export default function AppContext({ children }) {
   return (
     <GlobalContext.Provider value={{ test, updateTestString }}>{children}</GlobalContext.Provider>
   )
+}
+
+// Custom hook
+const useGlobalContext = () => {
+  return useContext(GlobalContext)
 }
