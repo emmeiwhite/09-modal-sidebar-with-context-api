@@ -1,13 +1,7 @@
-import Home from './components/Home'
-import Modal from './components/Modal'
-import Sidebar from './components/Sidebar'
-
 const App = () => {
   return (
     <>
-      <Home />
-      <Modal />
-      <Sidebar />
+      <h1>Hello World! </h1>
     </>
   )
 }
