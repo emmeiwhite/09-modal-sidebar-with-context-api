@@ -4,7 +4,7 @@ import { useGlobalContext } from '../context'
 export default function Modal() {
   const { isModalOpen, closeModal } = useGlobalContext()
   return (
-    <div className="modal-overlay">
+    <div className={isModalOpen ? 'modal-overlay show-modal' : 'modal-overlay'}>
       <div className="modal-container">
         <button
           className="close-modal-btn"

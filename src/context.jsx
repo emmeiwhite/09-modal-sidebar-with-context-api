@@ -19,7 +19,7 @@ function AppContext({ children }) {
   }
 
   const closeModal = () => {
-    setIsModalClose(false)
+    setIsModalOpen(false)
   }
 
   const contextState = {
