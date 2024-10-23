@@ -37,7 +37,7 @@ export default function Sidebar() {
         })}
       </ul>
 
-      <ul className="links">
+      <ul className="social-links">
         {social.map(link => {
           const { id, url, icon } = link
           return (
