@@ -297,9 +297,17 @@ main {
   display: grid;
   place-content: center;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 12;
+  z-index: -1;
+  visibility: none;
+  opacity: 0;
 }
 
+.show-modal {
+  z-index: 1;
+  visibility: visible;
+  opacity: 1;
+  transition: var(--transition);
+}
 .modal-container {
   display: grid;
   place-content: center;
