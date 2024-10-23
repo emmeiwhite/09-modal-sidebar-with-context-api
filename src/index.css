@@ -255,6 +255,7 @@ Project CSS
 ===============
 */
 
+/* --- Modal Code & Logic--- */
 main {
   width: 100%;
   height: 100vh;
@@ -328,4 +329,28 @@ main {
   border: transparent;
   color: var(--red-dark);
   cursor: pointer;
+}
+
+/* --- Sidebar Code & Logic --- */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--white);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  row-gap: 1rem;
+  box-shadow: var(---red-dark);
+  transition: var(--transition);
+  transform: translate(-100%);
+
+  @media (min-width: 768px) {
+    width: 400px;
+  }
+}
+
+.show-sidebar {
+  transform: translate(0);
 }

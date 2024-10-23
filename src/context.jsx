@@ -11,7 +11,9 @@ export default function AppContext({ children }) {
   // Write your application state and business logic to be passed to value prop
 
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
 
+  /** 1. Modal Business Logic*/
   function openModal() {
     setIsModalOpen(true)
   }
@@ -19,8 +21,20 @@ export default function AppContext({ children }) {
   function closeModal() {
     setIsModalOpen(false)
   }
+
+  /** 1. Sidebar Business Logic */
+  function openSidebar() {
+    setIsSidebarOpen(true)
+  }
+
+  function closeSidebar() {
+    setIsSidebarOpen(false)
+  }
+
   return (
-    <GlobalContext.Provider value={{ isModalOpen, openModal, closeModal }}>
+    <GlobalContext.Provider
+      value={{ isModalOpen, openModal, closeModal, isSidebarOpen, openSidebar, closeSidebar }}
+    >
       {children}
     </GlobalContext.Provider>
   )
