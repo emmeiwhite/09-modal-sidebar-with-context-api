@@ -18,5 +18,9 @@ export default function AppContext({ children }) {
   function closeModal() {
     setIsModalOpen(false)
   }
-  return <GlobalContext.Provider>{children}</GlobalContext.Provider>
+  return (
+    <GlobalContext.Provider value={{ isModalOpen, openModal, closeModal }}>
+      {children}
+    </GlobalContext.Provider>
+  )
 }
